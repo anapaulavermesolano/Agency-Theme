@@ -1,0 +1,14 @@
+#contact {
+	@include fondo($contact);
+	h2 {@include titulos(30px, 700, 100px auto 20px, 'Montserrat', $white, none);}
+    p.subtittle {@include titulos(12px, 400, 0 0 30px, 'Droid Serif', #888888, italic);}
+    .row {
+    	margin-top: 50px;
+    	.form-group {
+			margin-bottom: 21px;
+    		input {
+    			height: 44px;
+    		}
+    	}
+    }
+}

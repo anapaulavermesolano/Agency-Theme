@@ -1,0 +1,24 @@
+#team {
+	@include fondo($fondo);
+	@include sectiontext();
+	.row {
+		margin-top: 50px;
+		img {
+			@include round ($white);
+			margin: 10px auto 20px;
+		}
+		h4 { @include titulos(14px, 700, 0, 'Montserrat', $black, none);}
+		p { @include titulos(12px, 400, 7px 0 0, 'Droid Serif', $text, italic);}
+		@include box-redes();
+		.box-redes {
+			margin: 20px 0 50px;
+		}
+	}
+	p.lorem {
+		@include titulos(12px, 400, 0, 'Droid Serif', $text, italic);
+		padding: 0 190px;
+		@media only screen and (max-width: 768px ) {
+			padding: 0 20px;
+        }
+	}
+}

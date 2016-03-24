@@ -1,0 +1,102 @@
+//-section-services
+mixin iconservices(iconservices)
+	case iconservices
+		when "icon1"
+			i.fa.fa-shopping-cart.fa-stack
+		when "icon2"
+			i.fa.fa-laptop.fa-stack
+		when "icon3"
+			i.fa.fa-lock.fa-stack
+mixin colservices(iconservices, tittle)
+	.col-md-4.col-sm-4.col-xs-12
+		.icon
+		+iconservices(iconservices)
+		h3= tittle
+		p.text-services= text
+//-portfolio
+mixin portfolio(portfolio)
+	case portfolio
+		when "img1"
+			img.img-responsive(src="img/portfolio/roundicons.png")
+		when "img2"
+			img.img-responsive(src="img/portfolio/startup-framework.png")
+		when "img3"
+			img.img-responsive(src="img/portfolio/treehouse.png")
+		when "img4"
+			img.img-responsive(src="img/portfolio/golden-preview.png")
+		when "img5"
+			img.img-responsive(src="img/portfolio/escape-preview.png")
+		when "img6"
+			img.img-responsive(src="img/portfolio/dreams-preview.png")
+mixin portfolioimg(portfolio, tittle, subtittle2)
+	.col-md-4.col-xs-12
+		+portfolio(portfolio)
+		.box-white
+			span= tittle
+			p= subtittle2
+//-about
+
+
+-var hola= "lflflflflfl"
+
+mixin about(about)
+	case about
+		when "round1"
+			img.img-responsive(src="img/about/1.jpg")
+		when "round2"
+			img.img-responsive(src="img/about/2.jpg")
+		when "round3"
+			img.img-responsive(src="img/about/3.jpg")
+		when "round4"
+			img.img-responsive(src="img/about/4.jpg")
+mixin aboutcol(about, fecha, titulo)
+	.col-sm-5.col-xs-8
+		p.fecha= fecha
+		h4= titulo
+		p.text2= text2
+	.col-sm-2.col-xs-4
+		+about(about)
+	.col-sm-5
+mixin aboutcol2(about, fecha, titulo)
+	.col-sm-offset-5.col-sm-2.col-xs-4
+		+about(about)
+	.col-sm-5.col-xs-8
+		p.fecha= fecha
+		h4= titulo
+		p.text2= text2
+//-team
+mixin team(team)
+	case team
+		when "foto1"
+			img.img-responsive(src="img/team/1.jpg")
+		when "foto2"
+			img.img-responsive(src="img/team/2.jpg")
+		when "foto3"
+			img.img-responsive(src="img/team/3.jpg")
+mixin redes()
+	.box-redes
+		i.fa.fa-facebook.fa-stack
+	.box-redes
+		i.fa.fa-twitter.fa-stack
+	.box-redes
+		i.fa.fa-linkedin.fa-stack
+mixin teamcol(team, name, lead)
+	.col-md-4
+		+team(team)
+		h4= name
+		p= lead
+		+redes()
+//-logos
+mixin logoimg(logoimg)
+	case logoimg
+		when "logo1"
+			img.img-responsive(src="img/logos/envato.jpg")(style= "margin: 30px auto;")
+		when "logo2"
+			img.img-responsive(src="img/logos/designmodo.jpg")(style= "margin: 30px auto;")
+		when "logo3"
+			img.img-responsive(src="img/logos/themeforest.jpg")(style= "margin: 30px auto;")
+		when "logo4"
+			img.img-responsive(src="img/logos/creative-market.jpg")(style= "margin: 30px auto;")
+mixin logos(logoimg)
+	.col-md-3.col-sm-6
+		+logoimg(logoimg)

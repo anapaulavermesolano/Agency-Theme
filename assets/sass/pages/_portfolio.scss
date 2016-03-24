@@ -1,0 +1,24 @@
+#portfolio { 
+	@include fondo($fondo);
+	@include sectiontext();
+	img {
+		width: 100%;
+		margin-top: 35px;
+	}
+	.box-white {
+		background-color: $white;
+		padding: 20px;
+		span { 
+			@include titulos(14px, 700, 0, 'Montserrat', $black, none);
+			@media only screen and (max-width: 768px ) {
+				font-size: 20px;   
+        	}
+        }
+		p { 
+			@include titulos(12px, 400, 7px 0 0, 'Droid Serif', $text, italic);
+			@media only screen and (max-width: 768px ) {
+				font-size: 17px;   
+        	}
+        }
+	}
+}

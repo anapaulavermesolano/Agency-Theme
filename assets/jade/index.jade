@@ -1,0 +1,59 @@
+include views/helpers/variables
+include views/helpers/mixins
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title future imperfect
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='assets/css/main.css')
+        link(href="assets/css/bootstrap.min.css" rel="stylesheet")    
+        link(rel='stylesheet', href='assets/font-awesome/css/font-awesome.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Raleway:400,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css')
+        link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Montserrat', type='text/css')
+        link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Kaushan+Script', type='text/css')
+        link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300', type='text/css')
+        link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Droid+Serif:700italic,400italic,400,700', type='text/css')
+
+    body
+        header#header
+            nav.navbar.navbar-default.navbar-fixed-top#menu
+                .container
+                        .navbar-header
+                            button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                                    span.sr-only toggle navigation
+                                    span.icon-bar
+                                    span.icon-bar
+                                    span.icon-bar
+
+                            a.navbar-brand.titulo(href="#") 
+                                h1 Start Bootstrap
+
+                        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                            ul.nav.navbar-nav.navbar-right
+                                li
+                                    a.active(href="#services") SERVICES
+                                li
+                                    a(href="#portfolio") PORTFOLIO
+                                li
+                                    a(href="#about") ABOUT
+                                li
+                                    a(href="#team") TEAM
+                                li
+                                    a(href="#contact") CONTACT
+        section#banner.text-center
+            .container
+                .box-text
+                    h3 Welcome To Our Studio!
+                    h1 IT'S NICE TO MEET YOU
+                    button.botonyellow TELL ME MORE
+        include views/services
+        include views/portfolio
+        include views/about
+        include views/team
+        include views/logos
+        include views/contact
+        include views/footer
+        script(src="assets/js/jquery.js") 
+        script(type="text/javascript" src="assets/js/bootstrap.min.js")
+        script(src="assets/js/menu-scroll.js")

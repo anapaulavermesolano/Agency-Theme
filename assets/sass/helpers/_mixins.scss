@@ -1,0 +1,58 @@
+//Mixins
+@mixin titulos($fsize, $fw, $mg, $family, $color, $fontstyle) {
+    font-size: $fsize;
+    font-weight: $fw;
+    margin: $mg;
+    font-family: $family, sans-serif;
+    color: $color;
+    font-style: $fontstyle;
+}
+@mixin boton($bgbtn, $pdbtn, $colorbtn, $mgbtn, $borderbtn) {
+    background-color: $bgbtn;
+    padding: $pdbtn;
+    color: $colorbtn;
+    margin: $mgbtn;
+    border: $borderbtn;
+}
+@mixin sectiontext() {
+    h2 {@include titulos(30px, 700, 70px auto 20px, 'Montserrat', $black, none);}
+    p.subtittle {@include titulos(12px, 400, 0 0 30px, 'Droid Serif', $text, italic);}
+}
+@mixin fondo($fondocolor) {
+    background-color: $fondocolor;
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+@mixin round ($line){
+    border-radius: 100%;
+    border: 4px solid $line;
+}
+@mixin box-redes() {
+    .box-redes {
+        display: inline-block;
+        .fa-stack {
+            padding: 0px;
+            font-size: 15px;
+            background-color: $black;
+            border-radius: 100%;
+            color: $white;
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+}
+@mixin boton($bgbtn, $pdbtn, $colorbtn, $mgbtn, $borderbtn) {
+    background-color: $bgbtn;
+    padding: $pdbtn;
+    color: $colorbtn;
+    margin: $mgbtn;
+    border: $borderbtn;
+}
+@mixin border-radius($radius) {
+    -Webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
