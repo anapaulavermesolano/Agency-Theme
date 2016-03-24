@@ -1,0 +1,17 @@
+section#contact.text-center
+	.container
+		h2 CONTACT
+		p.subtittle= subtittle
+		.row
+			.col-md-6.col-sm-12
+				form
+					.form-group
+						input(type="text" class="form-control" required="required" placeholder="YOUR NAME *")
+					.form-group
+						input(type="text" class="form-control" required="required" placeholder="YOUR EMAIL *")
+					.form-group
+						input(type="text" class="form-control" required="required" placeholder="YOUR PHONE *")
+			.col-md-6.col-sm-12
+					.form-group
+						textarea(name="message" id="message" required="required" class="form-control" rows="8" placeholder="YOUR MESSAGE *")
+		button.botonyellow SEND MESSAGE

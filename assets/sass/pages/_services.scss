@@ -1,0 +1,13 @@
+#services {
+    @include sectiontext();
+	h3 {@include titulos(15px, 700, 20px 0, 'Montserrat', $black, none);}
+	p.text-services {@include titulos(12px, 400, 0, 'Roboto Slab', $text, none);}
+	.fa-stack {
+    	font-size: 50px;
+    	padding: 0px;
+    	background-color: $yellow;
+    	border-radius: 100%;
+    	margin-top: 50px;
+    	color: $white;
+    }
+}

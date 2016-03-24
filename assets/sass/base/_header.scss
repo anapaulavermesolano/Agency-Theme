@@ -1,0 +1,42 @@
+#header {
+	#menu.active {
+    	background-color: $contact;
+	}
+	.navbar-default {
+    	background-color: rgba(0,0,0,0);
+    	border-color: rgba(0,0,0,0);
+    	padding: 7px;
+    	margin: 0;
+	}
+	.navbar-nav {
+		padding: 14px 0;
+		li > a {
+    		@include titulos(12px, 300, 0, 'Montserrat', $white, sans-serif);
+    		&:hover, &:focus {
+    			background-color: $yellow;
+    			color: $white;
+    		}
+		}
+		.active {color: $white;}
+	}
+	.navbar-toggle {
+    	border: 1px solid $yellow;
+    	background-color: $yellow;
+    	margin-top: 22px;
+    	box-shadow: 2px 2px 7px $yellow;
+    	.icon-bar {
+    		background-color: $white;
+		}
+	}
+	.navbar-collapse {
+		
+	}
+	.navbar-brand {
+		h1 {
+			@include titulos(30px, 400, 0, 'Kaushan Script', $brand, cursive);
+		}
+	&:hover, &:focus {
+		background-color: rgba(0,0,0,0);
+	    }
+	}
+}

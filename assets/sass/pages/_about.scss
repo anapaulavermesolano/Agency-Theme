@@ -1,0 +1,37 @@
+#about {
+	position: relative;
+	margin-bottom: 100px;
+	@include sectiontext();
+	.mg-top {
+		margin-top: 50px;
+		img {
+			@include round ($linea);
+		}	
+		p.fecha, h4 {@include titulos(14px, 700, 7px 0, 'Montserrat', $black, none);}
+		p.text2 {@include titulos(12px, 400, 0, 'Roboto Slab', $text, none);}
+		.circulo {
+			@include round ($linea);
+			width: 132px;
+			height: 132px;
+			background-color: $yellow;
+			padding: 30px 20px 10px;
+			@include titulos(16px, 700, 0 auto, 'Montserrat', $white, none);
+		}	
+	}
+	&::before {
+		content: "";
+        border: 1.5px solid $linea;
+        position: absolute;
+        left: 50%;  
+        height: 600px;
+        top: 318px;
+        z-index: -20;
+        @media only screen and (max-width: 768px ) {
+			display: none;
+        }
+        @media only screen and (max-width: 990px ) {
+			height: 700px;
+			top: 280px;
+        }
+	}
+}

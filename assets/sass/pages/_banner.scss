@@ -1,0 +1,31 @@
+#banner{
+	background: url(../../img/header-bg.jpg) 12% 30% fixed;
+    padding:16% 0;
+    color: #fff;
+    .box-text {
+    	h3 {
+    		@include titulos(40px, 400, 0, 'Droid Serif', $white, italic);
+    		@media only screen and (max-width: 480px ) {
+			  font-size: 30px;   
+			  margin: 60px 0 50px;
+        	}    	
+        }
+    	h1 {
+    		@include titulos(70px, 700, 30px auto, 'Montserrat', $white, none);
+    		@media only screen and (max-width: 480px ) {
+			  font-size: 55px;   
+        	} 
+        }
+    }
+}
+.botonyellow {
+	@include boton($yellow, 10px, $white, 0, 2px solid $yellow);
+	@include border-radius(4px);
+	@include titulos(15px, 700, 0, 'Montserrat', $white, none);
+	&:hover {
+		background: rgba(0,0,0,0);
+	}
+	@media only screen and (max-width: 480px ) {
+		width: 100%;   
+    }
+}
